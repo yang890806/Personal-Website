@@ -1,0 +1,409 @@
+#Profile {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    opacity: 90%;
+}
+
+#question {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+
+p,
+h2,
+span {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #003060;
+    cursor: default;
+}
+
+div.section {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #003060;
+    padding-top: 50px;
+    display: table-cell;
+    cursor: default;
+}
+
+.title img {
+    height: 40px;
+    width: 40px;
+    display: table-cell;
+}
+
+div.ul_Icon {
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.icontable td {
+    text-align: center;
+    width: 100px;
+}
+
+.icontd p {
+    padding-top: 5px;
+}
+
+.icontd img:hover {
+    width: 35px;
+    height: 35px;
+}
+
+.icontd img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+table.DirectoryTable td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.DirectoryTable img {
+    height: 250px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+h1.Title img {
+    height: 45px;
+    width: 45px;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#main {
+    position: top left;
+    height: 100%;
+    background: url('img/8NEpCw9.jpg') top left;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    width: 100%;
+    bottom: 0px;
+}
+
+#nav {
+    opacity: 65%;
+    height: 50px;
+    background-color: black;
+}
+
+#navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-nav a:hover {
+    background-color: #003060;
+}
+
+.navbar-nav a {
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: transparent;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+.navbar-nav span {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.nav-link span {
+    cursor: pointer;
+}
+
+div.MAIN p {
+    display: block;
+    color: white;
+    padding-left: 100px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#gotop {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: transparent;
+    background-image: url("img/dsVHSzj.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 70%;
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+}
+
+#gotop:hover {
+    background-image: url("img/lbrtqDl.png");
+    opacity: 100%;
+}
+
+.carousel .carousel-item {
+    height: 550px;
+}
+
+.carousel .carousel-item img {
+    max-height: 550px;
+    object-fit: cover;
+}
+
+#mainafter {
+    position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    bottom: 0px;
+}
+
+.introblock {
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+.introblock p {
+    margin: 0;
+    text-align: left;
+}
+
+.introblock div {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.tag div {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #003060;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+.tag span {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.wrap h2 {
+    padding-right: 3px;
+}
+
+.wrap img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.works {
+    padding-top: 10px;
+}
+
+.works img {
+    vertical-align: top;
+    height: 200px;
+}
+
+.img_div {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    opacity: 0;
+    display: table;
+}
+
+.mask div {
+    width: fit-content;
+    height: fit-content;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mask h3,
+h1 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    cursor: default;
+}
+
+.img_div a:hover .mask {
+    opacity: 1;
+}
+
+.lifediv {
+    width: 1100px;
+    height: fit-content;
+    display: inline-block;
+}
+
+.lifeintro {
+    width: 428px;
+    float: right;
+    margin-top: 15px;
+    color: #003060;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.lifeintrocontent {
+    padding-top: 5px;
+    font-size: 18px;
+    text-align: left;
+    width: 350px;
+    margin: auto;
+}
+
+.lifeworks {
+    width: 672px;
+    /*display: inline-block;*/
+    float: left;
+}
+
+.lifeimg_div img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.lifeworks h2 {
+    text-align: left;
+    padding-left: 70px;
+    margin-top: 10px;
+}
+
+.lifeimg_div {
+    position: relative;
+    height: 200px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+.lifemask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    opacity: 0;
+    display: table;
+}
+
+.lifemask div {
+    width: fit-content;
+    height: fit-content;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.lifemask p {
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+.lifeimg_div a:hover .lifemask {
+    opacity: 1;
+}
+
+.morephoto {
+    background-color: #003060;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 0;
+    width: 190px;
+    height: 40px;
+    box-shadow: none;
+    background-image: url('img/photo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    text-align: left;
+    outline: none!important;
+}
+
+.morephoto:hover {
+    color: #003060;
+    background-color: white;
+    border: 2px;
+    border-color: #003060;
+    border-style: solid;
+}

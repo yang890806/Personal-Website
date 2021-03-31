@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="index.css" rel="stylesheet" type="text/css" />
+<link href="index.php" rel="stylesheet" type="text/php" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>0713404 楊代如</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <link rel="icon" href="picture/logo.jpg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Noto+Serif+TC:300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    //target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    target = $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+
+            });
+        });
+
+        $(function() {
+            $('[data-toggle="popover"]').popover({});
+        })
+
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        $(function() {
+            //control display of goTop button and motion
+            $("#gotop").click(function() {
+                jQuery("html,body").animate({
+                    scrollTop: 0
+                }, 1000);
+            });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 150) {
+                    $('#gotop').fadeIn("fast");
+                } else {
+                    $('#gotop').stop().fadeOut("fast");
+                }
+            });
+        });
+
+        $('.carousel').carousel({
+            interval: 2000
+        });
+
+        function morebtn() {
+            var moreBtn = document.getElementById('morebtn');
+            var lifeworks = document.getElementById('morebtndiv');
+            if (lifeworks.style.display === 'none') {
+                $('#morebtndiv').slideDown();
+                lifeworks.style.display = 'inline-block';
+                moreBtn.innerHTML = 'See Less Photos';
+            } else {
+                $('#morebtndiv').slideUp();
+                moreBtn.innerHTML = 'See More Photos';
+            }
+        }
+
+        var imgs = new Array("img/8NEpCw9.jpg", "img/IMG_8041.jpeg", "img/IMG_1842.jpeg");
+        var curIndex = 0;
+
+        function changeBg() {
+            if (curIndex == imgs.length - 1) {
+                curIndex = 0;
+            } else {
+                curIndex += 1;
+            }
+            var imgUrl = imgs[curIndex];
+            $('#main').css('background-image', 'url(' + imgUrl + ')');
+            $('#main').fadeIn(300); //this is new, will fade in smoothly 
+        }
+
+        function changeBackgroundSmoothly() {
+            $('#main').fadeOut(300, changeBg); //this is new, will fade out smoothly 
+        }
+
+        setInterval(changeBackgroundSmoothly, 5000);
+    </script>
+</head>
+
+<body>
+    <nav id="nav" class="navbar navbar-expand-sm fixed-top justify-content-end">
+        <ul id="navul" class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#aboutme"><span>About Me</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#aboutlife"><span>About Life</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#works"><span>Works</span></a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" class="nav-link" href="#home"><span>Home</span></a>
+            </li>
+        </ul>
+
+    </nav>
+    <div id="main" name="home" class="MAIN">
+        <p style="color: white;font-size: 70px; padding-left: 100px; padding-top: 230px;">Yang Tai-Ju</p>
+        <p style="color: white; font-size: 50px;">NCTUIMF</p>
+    </div>
+    <div id="mainafter">
+        <div class="section" id="section1" name="aboutme">
+            <div class="title">
+                <h1 style="font-size: 50px;">About Me</h1>
+                <img src="img/monster01.png" />
+            </div>
+            <div style="display:block; padding-top: 20px;">
+                <img id="Profile" src="img/87029769_2636367076490081_7429332977198301184_n.jpg">
+                <p style="font-size: 25px; padding-top:5px; margin-bottom: 0;">Yang Tai-Ju</p>
+                <span style="padding-left:12px;font-size: 20px;">NCTU IMF</span><span style="padding-left: 3px;"><a href="https://imf.nctu.edu.tw/" target="_blank"><img src="img/455792.svg" style="height: 15px; width: 15px;"/></a></span>
+                <div>
+                    <img src="img/2702604.svg" style="height: 17px; width: 17px;" />
+                    <span style="font-size: 18px; vertical-align: middle;">Taoyuan, Taiwan</span>
+                </div>
+            </div>
+            <div class="ul_Icon" style="padding-top: 15px;">
+                <table class="icontable">
+                    <tr>
+                        <td class="icontd">
+                            <a href="https://www.facebook.com/profile.php?id=100003504442560" target="_blank" data-toggle="tooltip" title="Facebook" data-placement="top"><img src="img/1051258.svg" title="楊代如" /></a>
+                            <p style="font-family: 'Noto Serif TC', serif;">楊代如</p>
+                        </td>
+                        <td class="icontd">
+                            <a href="https://www.instagram.com/yang_890806/" target="_blank" data-toggle="tooltip" title="Instagram" data-placement="top"><img src="img/408758.svg" title="yang_890806" /></a>
+                            <p>yang_890806</p>
+                        </td>
+                        <td class="icontd">
+                            <a href="https://line.me/ti/p/RbI8S9DKbh" target="_blank" data-toggle="tooltip" title="Line" data-placement="top"><img src="img/2111498.svg" title="luffy0505123" /></a>
+                            <p>luffy0505123</p>
+                        </td>
+                        <td class="icontd">
+                            <a data-toggle="tooltip" title="Gmail" data-placement="top">
+                                <img src="img/732200.svg" title="yang890806.dif07@nctu.edu.tw" />
+                            </a>
+                            <p>yang890806.dif07@nctu.edu.tw</p>
+                        </td>
+                        <td class="icontd">
+                            <a data-toggle="tooltip" title="My Phone" data-placement="top">
+                                <img src="img/733585.svg" title="0979568102" />
+                            </a>
+                            <p>0979568102</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="intro" style="padding-top: 5px;">
+                <div class="introblock">
+                    <div class="wrap">
+                        <h2>Introduction</h2>
+                        <img src="img/animal_namakemono.png">
+                    </div>
+                    <div style="width: 350px;">
+                        <p>
+                            I was born on 6 August, 2000, and have been lived in Taoyuan, Taiwan. There are four members in my family, including my parents, one elder sister, and me. I like eating and listening to the music in my spare time. Sometimes, I spend my summer vacation
+                            traveling abroad to experience a lot of different cultures. Although I like to travel, I also like to sleep. And my favorite food are eggs, taro, and cheese. I've dreamed to be a software engineer in the future since I'm very
+                            interested in computer information. Therefore, I entered NCTUIMF to learn some knowledge about computer information and finance.
+                        </p>
+                    </div>
+                </div>
+                <div class="introblock">
+                    <div class="wrap">
+                        <h2>Education</h2>
+                        <img src="img/sotsugyo_boushi.png">
+                    </div>
+                    <div style="font-size: 17px;">
+                        <b><p>University: National Chiao-Tung University</p>
+                        <p>Major: Information Management and Finance</p></b>
+                    </div>
+                    <div style="width: 350px;">
+                        <p>I was graduated from Wu-Ling Senior High School. Then why I chose to enter NCTUIMF? When I was in junior high school, my teacher taught us how to build a webpage, and I thought that it was so fun. Even I was responsible for my
+                            class webpage. Since then, I found that I was really interested in computer. So, the departments of college which I applied for are all about computer information. And in recent years, fintech has been a future trend in the
+                            whole world. I'd like to go into fintech field in the future. That's why I decided to enter <b>NCTUIMF</b>!
+                        </p>
+                    </div>
+                </div>
+                <div class="introblock">
+                    <div>
+                        <div class="wrap">
+                            <h2>Interests&Skills</h2>
+                            <img src="img/food_ontama_age_tenpura.png">
+                        </div>
+                        <div class="tag" style="width: 350px;">
+                            <div><span>#Travel</span></div>
+                            <div><span>#Eat</span></div>
+                            <div><span>#Sleep</span></div>
+                            <div><span>#Apple</span></div>
+                            <div><span>#Computer</span></div>
+                            <div><span>#Converse</span></div>
+                            <div><span>#Taro</span></div>
+                            <div><span>#Egg</span></div>
+                            <div><span>#Cheese</span></div>
+                            <div><span>#Kpop</span></div>
+                            <div><span>#Design</span></div>
+                            <div><span>#Typing</span></div>
+                            <div><span>#Coding</span></div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="wrap">
+                            <h2>Language</h2>
+                            <img src="img/fantasy_mandrake_mandragora.png" />
+                            <a data-toggle="popover" data-content="Human&Programming Languageʕʘ̅͜ʘ̅ʔ" data-placement="top" style="margin-left: 3px;">
+                                <img id="question" src="img/question.png" onmouseover="this.src='img/question2.png';" onmouseout="this.src='img/question.png';" />
+                            </a>
+                        </div>
+                        <div class="tag" style="width: 350px;">
+                            <div><span>#Chinese</span></div>
+                            <div><span>#English (?)</span></div>
+                            <div><span>#C++</span></div>
+                            <div><span>#Python</span></div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="wrap">
+                            <h2>Experience</h2>
+                            <img src="img/figure_tsumitate.png">
+                        </div>
+                        <div style="width: 350px;">
+                            <p>12th NCTU IMF Welcome Camp Director of Graphic Arts</p>
+                            <p>13th NCTU IMF Camp Director of Graphic Arts</p>
+                            <p>2019 24th InnoServe Awards IP Honorable Mention</p>
+                            <p>2019 24th InnoServe Awards TCGIA Honorable Mention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2" name="aboutlife">
+            <div class="title" style="padding-bottom: 10px;">
+                <h1 style="font-size: 50px;">About Life</h1>
+                <img src="img/monster02.png" />
+            </div>
+            <div id="carousel" class="container">
+                <div class="carousel slide" data-ride="carousel" id="myCarousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                        <li data-target="#myCarousel" data-slide-to="7"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/carousel1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/btbEIHb.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/IMG_1662.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/IMG_4429.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/gkwFSkp.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/IMG_7368.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/IMG_3609.JPG" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/RpEeg06.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <button class="morephoto" id="morebtn" onclick="morebtn()">See Less Photos</button>
+            <div id="morebtndiv">
+                <div class="lifediv">
+                    <div class="lifeworks" id="lifeworks" style="padding-top: 7.5px;">
+                        <div class="lifeimg_div">
+                            <img src="img/IMG_4601.jpeg" />
+                            <a>
+                                <div class="lifemask">
+                                    <div>
+                                        <p style="font-size: 20px;">制服聚</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div">
+                            <img src="img/IMG_3924.jpeg" />
+                            <a>
+                                <div class="lifemask">
+                                    <div>
+                                        <p style="font-size: 20px;">畢業旅行</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class=" lifeimg_div " id="test ">
+                            <img src="img/IMG_4431.jpeg" />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">畢業旅行</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div">
+                            <img src="img/lifeimg/IMG_1089.jpeg" />
+                            <a>
+                                <div class="lifemask">
+                                    <div>
+                                        <p style="font-size: 20px;">108 醜女團</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div">
+                            <img src="img/lifeimg/IMG_1127.jpeg" />
+                            <a>
+                                <div class="lifemask">
+                                    <div>
+                                        <p>7 1 1</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div">
+                            <img src="img/IMG_1083.jpeg" />
+                            <a>
+                                <div class="lifemask">
+                                    <div>
+                                        <p>7 1 1</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lifeintro">
+                        <h1>Senior High School</h1>
+                        <h2>2016-2018</h2>
+                        <div class="lifeintrocontent">
+                            <p>
+                                Fortunately, I was admitted to Wu-Ling Senior High School. The students here are very smart and awesome. But they are also very playful and interesting. Even in the school anniversary, the military instructors held the contest that climbing over the wall
+                                and zipline game. And the most important thing in my senior high school's life is that I met many nice friends. We made lots of crazy and fun memories together. This is the most precious time in my life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lifediv">
+                    <div class="lifeintro" style="float: left;">
+                        <h1>June, 2018</h1>
+                        <img src="img/austria.png" style="height: 40px;" />
+                        <img src="img/czech-republic.png" style="height:40px;" />
+                        <img src="img/germany.png" style="height:40px;" />
+                        <div class="lifeintrocontent">
+                            <p>After graduating from senior high school, my mom took me to travel to the countries which we both desired! Even we went to visit the most beautiful town in Europe—Český Krumlov. </p>
+                        </div>
+                    </div>
+                    <div class="lifeworks " id="lifeworks " style="padding-top: 7.5px; float: right;">
+                        <div class="lifeimg_div " id="test">
+                            <img src="img/IMG_2003.jpeg" />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 24px; ">Vienna, Austria</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_1744.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">捷克肉桂捲</p>
+                                        <p style="font-size: 24px; ">Prague, Czech Republic</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_1876.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 23px; ">鹽洞</p>
+                                        <p>Salzbergwek, Germany</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lifediv">
+                    <div class="lifeworks " id="lifeworks " style="padding-top: 7.5px; ">
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_2456.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Musée du Louvre</p>
+                                        <p>Paris, France</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_3044.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Notre-Dame</p>
+                                        <p>Paris, France</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_3057.jpeg " style="transform:rotate(90deg); " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Amorino</p>
+                                        <p>Paris, France</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_3706.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Brugge, Belgium</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_4095 (1).jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">梵谷森林公園</p>
+                                        <p>Netherlands</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_4507.jpeg " style="transform:rotate(90deg); " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">荷蘭票選No.1薯條</p>
+                                        <p>Amsterdam, Netherlands</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lifeintro" style="float: right;">
+                        <h1>August, 2018</h1>
+                        <img src="img/france.png" style="height: 40px;" />
+                        <img src="img/belgium.png" style="height:40px;" />
+                        <img src="img/netherlands.png" style="height:40px;" />
+                        <div class="lifeintrocontent">
+                            <p>To my impression, Paris was a romantic city. The street may be so clean, and there was little crime in Paris. In fact, there is a lot of crime in the city, and sometimes the street stank of bad ordor. Nonetheless, Paris' attractions
+                                are still beautiful and intimidating, and are Belgium and Netherlands, too. They gave me lots of sense of elegance! Especially, the most surprising and shocking thing for me is Amterdam. It is full of the smell of cannabis,
+                                and it smells too stinky and disgusting to breathe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lifediv">
+                    <div class="lifeintro" style="float: left;">
+                        <h1>August, 2019</h1>
+                        <img src="img/australia.png" style="height: 40px;" />
+                        <div class="lifeintrocontent">
+                            <p>Because of my mom's company trip, my whole family went to travel to Australia together. It makes me so excited since I had been long for Australia to see the kangaroos and koalas before! Apart from kangaroos and koalas, I see
+                                the wombats and sheep show. It was so fresh and interesting for me because I'm afraid of touching animals. But they are so tame that I'm not afraid of them. Besides, the weather here is so warm even though August is the
+                                winter in Australia. I like all in Australia and enjoyed this vacation so much!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lifeworks " id="lifeworks " style="padding-top: 7.5px; float: right;">
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_6871.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">雪梨歌劇院</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_7039.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">情人港</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/RpEeg06.jpg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>The Rocks</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_1254.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Kangaroo</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_7446.jpeg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Koala</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/IMG_7535.jpeg" />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>Wombat</p>
+                                        <p>Sydney, Australia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lifediv">
+                    <div class="lifeintro">
+                        <h1>College</h1>
+                        <h2>2018~</h2>
+                        <div class="lifeintrocontent">
+                            <p>The college life must be the most fulfilling time in my life. I participated many activities of the department and camps, and I also tried lots of fresh things like dancing and acting. Dancing and acting are my biggest obstacles,
+                                and I practiced them very hard and tired. Simultaneously, I also thought they were so interesting and I had rare chance to do them. And I believe there must be a lot of cool and fresh things to do in the future college
+                                life.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lifeworks " id="lifeworks " style="padding-top: 7.5px;">
+                        <div class="lifeimg_div">
+                            <img src="img/gkwFSkp.jpg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">資財之夜</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/IMG_8181.jpg " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>19 Years Old</p>
+                                        <p>Birthday</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_2955.JPG " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>12th NCTU IMF Camp</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/54327598.a12ad1e45de373e73bda9a8c6545f565.19122305.JPG " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">七系聯合耶舞</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/lifeimg/IMG_0154.JPG " />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p>13th NCTU IMF Camp</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lifeimg_div ">
+                            <img src="img/IMG_2767.jpeg" />
+                            <a>
+                                <div class="lifemask ">
+                                    <div>
+                                        <p style="font-size: 20px; ">桃武雲嘉迎新</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section3 " name="works">
+        <div class="title ">
+            <h1 style="font-size: 50px; ">Works</h1>
+            <img src="img/monster08.png " />
+        </div>
+        <div class="wrap " style="padding-top: 5px;height: fit-content; width: fit-content;background-image:url( 'img/line.png');background-size: contain; background-repeat: no-repeat; background-position-y: bottom; ">
+            <h2 style="padding-left: 20px; ">13th NCTU IMF Camp</h2>
+        </div>
+        <div style="border-color: #003060; border-style: dashed; border-radius:10px; margin: auto; margin-top: 10px;font-family: 'Barlow Condensed', sans-serif; color: #003060; width: 800px; padding-left: 10px; padding-right: 10px; cursor: default; ">
+            This is my first time to be a Director of Graphic Art of 13th NCTU IMF Camp. To be honest, I was not good for the art. I was selected for the important position since I was in Artistic Design Department last year. I was really happy that my art ability
+            was recognized by event general coordinator. Meanwhile, I was also worried about I would mess up on the whole camp. But, this may be only one chance to try this commendable experience. I didn't want to blow it. Finally, I decided to assume
+            this position. <br>So, the following are my works which I spent the whole semester making.
+        </div>
+        <div class="works" style="padding-top: 20px;">
+            <div class="img_div " style="height: 300px; ">
+                <img src="img/Poster-01.png " style="height: 300px; " />
+                <a>
+                    <div class="mask " style="height: 300px; width: 100%; ">
+                        <div>
+                            <h1>Poster</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="img_div ">
+                <img src="img/Profile-01.png " />
+                <a>
+                    <div class="mask ">
+                        <div>
+                            <h1>Profile</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="img_div ">
+                <img src="img/clothe2.png " />
+                <a>
+                    <div class="mask " style="background: rgba(0,0,0,0.8); ">
+                        <div>
+                            <h1 style="font-size:25px; ">營服短T</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="img_div ">
+                <img src="img/clothe1.png " />
+                <a>
+                    <div class="mask " style="background: rgba(0,0,0,0.8); ">
+                        <div>
+                            <h1 style="font-size: 25px; ">工人帽T</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="height: 10px; background-color: #003060; opacity: 90%;"></div>
+    <button id="gotop"></button>
+</body>
+
+</html>
